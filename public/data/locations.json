@@ -1,0 +1,74 @@
+{
+  "locations": [
+    {
+      "name": "Greater London",
+      "center": {"lat": 51.5074, "lng": -0.1278},
+      "resources": [
+        {
+          "id": 1,
+          "name": "Sunshine Care Home",
+          "category": "care-homes",
+          "address": "123 Care Street, London",
+          "phone": "020 1234 5678",
+          "website": "https://sunshinecare.example.com"
+        }
+      ]
+    },
+    {
+      "name": "Greater Manchester",
+      "center": {"lat": 53.4808, "lng": -2.2426}, 
+      "resources": [
+        {
+          "id": 2,
+          "name": "HomeCare Plus",
+          "category": "care-homes",
+          "address": "45 Support Road, Manchester",
+          "phone": "0161 234 5678",
+          "website": "https://homecareplus.example.com"
+        }
+      ]
+    },
+    {
+      "name": "West Yorkshire",
+      "center": {"lat": 53.8008, "lng": -1.5491},
+      "resources": [
+        {
+          "id": 3,
+          "name": "Yorkshire Mobility",
+          "category": "mobility-aids",
+          "address": "78 Helper Street, Leeds",
+          "phone": "0113 234 5678",
+          "website": "https://yorkshiremobility.example.com"
+        }
+      ]
+    },
+    {
+      "name": "Birmingham",
+      "center": {"lat": 52.4862, "lng": -1.8904},
+      "resources": [
+        {
+          "id": 4,
+          "name": "Midlands Elder Law",
+          "category": "solicitors",
+          "address": "90 Legal Lane, Birmingham",
+          "phone": "0121 234 5678",
+          "website": "https://midlandselderlaw.example.com"
+        }
+      ]
+    },
+    {
+      "name": "Edinburgh",
+      "center": {"lat": 55.9533, "lng": -3.1883},
+      "resources": [
+        {
+          "id": 5,
+          "name": "Scottish Care Services",
+          "category": "meals-on-wheels",
+          "address": "34 Meal Drive, Edinburgh",
+          "phone": "0131 234 5678",
+          "website": "https://scotcare.example.com"
+        }
+      ]
+    }
+  ]
+}

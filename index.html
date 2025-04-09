@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elder Care Directory - UK</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Elder Care Directory</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./emergency.html">Emergency Contacts</a></li>
+                <li><a href="./benefits-calculator.html">Benefits Calculator</a></li>
+                <li><a href="./training.html">Training Resources</a></li>
+                <li><a href="./resources.html">Resource Packs</a></li>
+                <li><a href="./knowledge.html">Knowledge Hub</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <div class="search-bar">
+                <div class="filter-section">
+                    <div class="selected-display" id="category-display">Select Category...</div>
+                    <select id="category-select" class="filter-select">
+                        <option value="" selected disabled hidden>Select Category...</option>
+                        <option value="">All Categories</option>
+                        <option value="legal">Legal</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="food">Food</option>
+                        <option value="mobility-aids">Mobility Aids</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="charities">Charities</option>
+                        <option value="care-homes">Care Homes</option>
+                    </select>
+                </div>
+                <div class="filter-divider"></div>
+                <div class="filter-section">
+                    <div class="selected-display" id="location-display">Select Location...</div>
+                    <select id="location-select" class="filter-select">
+                        <option value="" selected disabled hidden>Select Location...</option>
+                        <option value="">All Locations</option>
+                        <option value="greater-london">Greater London</option>
+                        <option value="greater-manchester">Greater Manchester</option>
+                        <option value="north-east">North East</option>
+                        <option value="north-west">North West</option>
+                        <option value="west-midlands">West Midlands</option>
+                        <option value="east-midlands">East Midlands</option>
+                        <option value="west-yorkshire">West Yorkshire</option>
+                        <option value="south-yorkshire">South Yorkshire</option>
+                        <option value="merseyside">Merseyside</option>
+                        <option value="east-anglia">East Anglia</option>
+                        <option value="south-east">South East</option>
+                        <option value="south-west">South West</option>
+                        <option value="wales">Wales</option>
+                        <option value="scotland">Scotland</option>
+                        <option value="northern-ireland">Northern Ireland</option>
+                    </select>
+                </div>
+                <button class="search-button" onclick="applyFilters()">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="map-section">
+            <div id="map"></div>
+        </section>
+
+        <section id="results">
+            <h2>Featured Care Services</h2>
+            <div class="business-grid">
+                <!-- Business cards will be dynamically populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./emergency.html">Emergency Contacts</a></li>
+                    <li><a href="./benefits-calculator.html">Benefits Calculator</a></li>
+                    <li><a href="./training.html">Training Resources</a></li>
+                    <li><a href="./resources.html">Resource Packs</a></li>
+                    <li><a href="./knowledge.html">Knowledge Hub</a></li>
+                    <li><a href="https://www.turn2us.org.uk" target="_blank">Turn2Us Benefits Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li>Age UK Advice: 0800 678 1602</li>
+                    <li>Carers UK: 0808 808 7777</li>
+                    <li>Samaritans: 116 123</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elder Care Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

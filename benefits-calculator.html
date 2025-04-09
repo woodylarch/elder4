@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits Calculator - Elder Care Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .benefits-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+        }
+        
+        .turn2us-card {
+            text-align: center;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .benefits-title {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .benefits-description {
+            margin: 1.5rem 0;
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+            max-width: 550px;
+            margin: 2rem auto;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .checkmark {
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .turn2us-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 12px rgba(99, 179, 237, 0.4);
+        }
+        
+        .turn2us-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(99, 179, 237, 0.5);
+            background: #4299e1;
+        }
+        
+        .benefits-footer {
+            margin-top: 2rem;
+            color: #718096;
+            font-size: 0.95rem;
+        }
+
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 0.5rem;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        
+        .nav-bar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .benefits-container {
+                padding: 1rem;
+            }
+            
+            .turn2us-card {
+                padding: 1.5rem;
+            }
+            
+            .benefits-list {
+                padding-left: 0;
+            }
+            
+            .nav-bar a {
+                margin: 0.5rem;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Benefits Calculator</h1>
+        <div class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="emergency.html">Emergency Contacts</a>
+            <a href="training.html">Training Resources</a>
+            <a href="resources.html">Resource Packs</a>
+            <a href="knowledge.html">Knowledge Hub</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="benefits-container">
+            <div class="turn2us-card">
+                <h2 class="benefits-title">Get Professional Benefits Advice</h2>
+
+                <p class="benefits-description">
+                    As a carer for an elderly person in the UK, you may be entitled to various benefits and financial support.
+                    Understanding what benefits you or the person you care for can claim can be complex. That's why we
+                    recommend using Turn2Us - the UK's leading benefits calculator and support charity.
+                </p>
+
+                <ul class="benefits-list">
+                    <li><span class="checkmark">✓</span> Always up-to-date with the latest benefits rules and entitlements</li>
+                    <li><span class="checkmark">✓</span> Comprehensive and covers all available benefits including Carer's Allowance, Attendance Allowance, and Pension Credit</li>
+                    <li><span class="checkmark">✓</span> Free to use and completely confidential with no registration required</li>
+                    <li><span class="checkmark">✓</span> Provides detailed explanations of your entitlements and next steps to claim</li>
+                    <li><span class="checkmark">✓</span> Includes information on additional grants and support available to carers and elderly people</li>
+                </ul>
+
+                <a href="https://www.turn2us.org.uk/Find-Benefits-Grants" 
+                   target="_blank"
+                   class="turn2us-button">
+                    Calculate Your Benefits on Turn2Us
+                </a>
+
+                <p class="benefits-footer">
+                    Turn2Us is a national charity providing practical help to people who are struggling financially.
+                    They help people to build financial resilience and thrive.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="emergency.html">Emergency Contacts</a></li>
+                    <li><a href="training.html">Training Resources</a></li>
+                    <li><a href="resources.html">Resource Packs</a></li>
+                    <li><a href="knowledge.html">Knowledge Hub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li>Age UK Advice: 0800 678 1602</li>
+                    <li>Carers UK: 0808 808 7777</li>
+                    <li>Samaritans: 116 123</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elder Care Directory. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

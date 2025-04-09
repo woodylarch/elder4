@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider Profile - Elder Care Directory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Elder Care Directory</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="emergency.html">Emergency Contacts</a></li>
+                <li><a href="benefits-calculator.html">Benefits Calculator</a></li>
+                <li><a href="training.html">Training Resources</a></li>
+                <li><a href="resources.html">Resource Packs</a></li>
+                <li><a href="knowledge.html">Knowledge Hub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <a href="index.html" class="back-button">← Back to Directory</a>
+            
+            <div class="profile-header">
+                <h1 id="profile-name">Age UK Surrey Care Services</h1>
+                <div class="profile-meta">
+                    <div class="profile-meta-item">
+                        <span>Category:</span>
+                        <span id="profile-category" class="category">Healthcare</span>
+                    </div>
+                    <div class="profile-meta-item">
+                        <span>Location:</span>
+                        <span id="profile-location">Surrey</span>
+                    </div>
+                    <div class="profile-meta-item">
+                        <span>Rating:</span>
+                        <span id="profile-rating" class="rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80" alt="Care service" class="profile-image" id="profile-image">
+            
+            <div class="profile-content">
+                <div class="profile-description">
+                    <h2>About This Service</h2>
+                    <p id="profile-description">
+                        Age UK Surrey is a local charity providing support services to older people throughout Surrey, enabling them to remain independent and informed, with a good quality of life. We provide a range of services including:
+                    </p>
+                    <ul>
+                        <li>Home help services - cleaning, shopping, laundry</li>
+                        <li>Befriending service - regular visits from volunteers</li>
+                        <li>Information and advice on benefits, housing, and care options</li>
+                        <li>Computer and technology help</li>
+                        <li>Social activities and clubs</li>
+                    </ul>
+                    
+                    <h3>Our Commitment</h3>
+                    <p>
+                        We are committed to providing high-quality services that maintain dignity and respect for all our clients. Our staff are fully trained, DBS checked and supported through regular supervision.
+                    </p>
+                    
+                    <h3>Costs</h3>
+                    <p>
+                        Our services have different costs depending on the type of support required. Some services are free while others are charged at competitive rates. We can provide detailed pricing information on request and can also advise on potential funding sources.
+                    </p>
+                </div>
+                
+                <div class="profile-sidebar">
+                    <h3>Contact Information</h3>
+                    <div class="profile-contact">
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <span id="profile-phone">01483 503414</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span id="profile-email">enquiries@ageuksurrey.org.uk</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Address:</strong>
+                            <span id="profile-address">Rex House, William Road, Guildford, Surrey GU1 4QZ</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Website:</strong>
+                            <a href="https://www.ageuk.org.uk/surrey/" target="_blank" id="profile-website">www.ageuk.org.uk/surrey</a>
+                        </div>
+                    </div>
+                    
+                    <h3>Opening Hours</h3>
+                    <div class="profile-hours">
+                        <div class="contact-item">
+                            <strong>Monday - Friday:</strong>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Saturday - Sunday:</strong>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="emergency.html">Emergency Contacts</a></li>
+                    <li><a href="benefits-calculator.html">Benefits Calculator</a></li>
+                    <li><a href="training.html">Training Resources</a></li>
+                    <li><a href="resources.html">Resource Packs</a></li>
+                    <li><a href="knowledge.html">Knowledge Hub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li>Age UK Advice: 0800 678 1602</li>
+                    <li>Carers UK: 0808 808 7777</li>
+                    <li>Samaritans: 116 123</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elder Care Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the profile ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const profileId = urlParams.get('id');
+        
+        // If we have a profile ID, fetch the profile data
+        if (profileId) {
+            fetchProfileData(profileId);
+        }
+        
+        async function fetchProfileData(id) {
+            try {
+                // Fetch the profile data from our resources.json file
+                const response = await fetch('./data/resources.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load resources');
+                }
+                
+                const data = await response.json();
+                const resource = data.resources.find(r => r.id === id);
+                
+                if (resource) {
+                    // Populate the profile page with the resource data
+                    updateProfilePage(resource);
+                } else {
+                    console.error('Resource not found with ID:', id);
+                }
+            } catch (error) {
+                console.error('Error loading profile:', error);
+            }
+        }
+        
+        function updateProfilePage(resource) {
+            // Update the page title
+            document.title = `${resource.name} - Elder Care Directory`;
+            
+            // Update the profile content
+            document.getElementById('profile-name').textContent = resource.name;
+            document.getElementById('profile-category').textContent = resource.category;
+            document.getElementById('profile-location').textContent = resource.location;
+            
+            // Update rating with stars
+            const ratingStars = '★'.repeat(resource.rating) + '☆'.repeat(5 - resource.rating);
+            document.getElementById('profile-rating').textContent = ratingStars;
+            
+            // Update contact information if available
+            if (resource.phone) document.getElementById('profile-phone').textContent = resource.phone;
+            if (resource.email) document.getElementById('profile-email').textContent = resource.email;
+            if (resource.address) document.getElementById('profile-address').textContent = resource.address;
+            
+            // Update website link if available
+            if (resource.url) {
+                const websiteElement = document.getElementById('profile-website');
+                websiteElement.href = resource.url;
+                websiteElement.textContent = resource.url.replace(/^https?:\/\//, '');
+            }
+            
+            // Update description if available
+            if (resource.description) {
+                document.getElementById('profile-description').textContent = resource.description;
+            }
+            
+            // Update image if available
+            if (resource.image) {
+                document.getElementById('profile-image').src = resource.image;
+            }
+        }
+    </script>
+</body>
+</html>
